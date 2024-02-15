@@ -9,7 +9,7 @@ public class State
     private int whoseMove = Constants.X;
     private String xName = "";
     private String oName = "";
-    private int[][] board = new int[Constants.BOARD_COLUMNS][Constants.BOARD_ROWS];
+    private int[][] board = new int[Constants.BOARD_ROWS][Constants.BOARD_COLUMNS];
 
     public int getGameState() {
         return this.gameState;
@@ -44,7 +44,11 @@ public class State
     }
 
     public int getBoardCell(int row, int col) {
-        return this.board[row][col];
+        if (row >= 0 && row < Constants.BOARD_ROWS && col >= 0 && col < Constants.BOARD_COLUMNS) {
+            return this.board[row][col];
+        } else {
+            return Constants.INVALID_CELL;
+        }
     }
 
     public void setBoardCell(int row, int col, int value) {
@@ -55,11 +59,11 @@ public class State
         // Check rows, columns, and diagonals for a win
         for (int i = 0; i < Constants.BOARD_ROWS; i++) {
             // Check rows
-            if (board[i][0] == whoseMove && board[i][1] == whoseMove && board[i][2] == whoseMove && board[i][3] == whoseMove) {
+            if (board[i][0] == whoseMove && board[i][1] == whoseMove && board[i][2] == whoseMove) {
                 return true;
             }
             // Check columns
-            if (board[0][i] == whoseMove && board[1][i] == whoseMove && board[2][i] == whoseMove && board[3][i] == whoseMove) {
+            if (board[0][i] == whoseMove && board[1][i] == whoseMove && board[2][i] == whoseMove) {
                 return true;
             }
         }

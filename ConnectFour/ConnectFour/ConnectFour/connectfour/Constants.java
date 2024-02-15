@@ -28,12 +28,13 @@ public class Constants
     public static final int O_WINS = 9;
     public static final int GAME_OVER = 10;
     public static final int QUIT_PROGRAM = 11;
+    public static final int INVALID_CELL = -2;
     
     // Strings
-    public static final String DIVIDER_STRING = "|---|---|---|---|---|---|--|";
+    public static final String DIVIDER_STRING = "|---|---|---|---|---|---|";
     public static final String BOARD_STRING = "| %s | %s | %s | %s | %s | %s | %s |";
     public static final String GET_PLAYER_NAME = "Player %s: What is your name? --> ";
-    public static final String TITLE = "Thanks for playing Connect Four!";
+    public static final String TITLE = "Thanks for playing Tic-Tac-Toe!";
     public static final String GET_ROW_MOVE = "Player %s (%s): Enter the row for your next move --> ";
     public static final String GET_COL_MOVE = "Player %s (%s): Enter the column for your next move -->";
     public static final String INVALID_ROW_OR_COLUMN = "Your row and column must be 1, 2, or 3";

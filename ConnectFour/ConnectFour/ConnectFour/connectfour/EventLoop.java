@@ -6,7 +6,7 @@ public class EventLoop {
   State state = new State();
   UI ui = new UI();
   int row, col;
-  private int[][] board = new int[Constants.BOARD_ROWS][Constants.BOARD_COLUMNS];
+  
   public static void main(String[] args) {
       EventLoop eventLoop = new EventLoop();
       eventLoop.run();
